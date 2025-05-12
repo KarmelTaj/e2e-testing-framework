@@ -1,0 +1,47 @@
+from scenario_tester.scenarios import BaseScenario
+from .endpoints import {{ app_name_title }}Endpoints
+from scenario_tester.assertions import Assert
+
+class Test{{ app_name_title }}Module(BaseScenario):
+    """
+    Test Scenario Template for {{ app_name_title }} Module
+    
+    KEY INTEGRATIONS:
+    - Uses {{ app_name_title }}Endpoints for module-specific API routes
+    - Authenticates using credentials from .env via credentials.py
+    - Follows standardized testing patterns
+    
+    ENVIRONMENT CONFIGURATION:
+    1. Credentials are loaded from .env file (gitignored)
+    2. Available environments: development/staging/local (changeable for your needs)
+    3. User types configured in credentials.py:
+       - backoffice/partner1/partner2 etc. (changeable for your needs)
+    
+    USAGE:
+    1. Replace {{ app_name_title }} with your desired name
+    2. Implement test steps inside run() method
+    3. Use self.login() with credentials.py user types
+    4. Call APIs via {{ app_name_title }}Endpoints
+    """
+    
+    def run(self):
+        """
+        Implement your test workflow here
+        
+        STANDARD PATTERN:
+        1. Authenticate (using credentials.py users)
+        2. Execute module workflow
+        3. Validate system state
+        4. Cleanup test data
+        
+        EXAMPLE:
+        # 1. Authenticate
+        _, status = self.login("partner1", {{ app_name_title }}Endpoints.LOGIN)
+        Assert.assertEqual(status, 200)
+        
+        # 2. Execute workflow
+        response = self.call({{ app_name_title }}Endpoints.ACTION, data)
+        
+        # 3. Validate
+        Assert.assertIn("expected_field", response)
+        """

@@ -1,0 +1,37 @@
+from scenario_tester.endpoints import EndPoint, HTTPMethods
+
+class {{ app_name_title }}Endpoints:
+    """
+    API Endpoint Configuration for {{ app_name_title }} Module
+    
+    PURPOSE:
+    - Centralizes all module-specific API endpoints
+    - Standardizes HTTP methods and URL patterns
+    - Supports path parameters with {variable} syntax
+    
+    AUTHENTICATION SYSTEM:
+    - Uses single JWT token authentication
+    - Requires LOGIN endpoint to be defined
+    - Credentials loaded from .env via credentials.py
+    - Roles configured in CREDENTIALS dictionary:
+      * Available roles: backoffice, partner1, partner2, etc.
+      * Environment detection based on BASE_URL
+    
+    USAGE:
+    1. Add endpoints as class attributes
+    2. Use format_endpoint() for path parameters:
+       endpoint = format_endpoint(ENDPOINT, param=value)
+    3. Call endpoints via BaseScenario.call()
+    
+    EXAMPLE:
+    class UserEndpoints:
+        LOGIN = EndPoint(HTTPMethods.POST, "/auth/login/")
+        GET_USER = EndPoint(HTTPMethods.GET, "/users/{user_id}/")
+    """
+
+    # Authentication Endpoints (REQUIRED)
+    LOGIN = EndPoint(HTTPMethods.POST, "/auth/token/")
+    # Note: This endpoint must:
+    # - Accept {username, password} in POST body
+    # - Return {access: token} on success
+    # - Use status code 200 on success
