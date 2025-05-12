@@ -3,7 +3,6 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
 [![Django 5.1](https://img.shields.io/badge/django-5.1-green)](https://www.djangoproject.com/)
 [![DRF 3.15](https://img.shields.io/badge/drf-3.15-red)](https://www.django-rest-framework.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A comprehensive Django-based framework for automated end-to-end API testing across multiple environments.
 
