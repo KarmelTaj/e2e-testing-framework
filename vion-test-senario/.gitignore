@@ -1,0 +1,59 @@
+# Byte-compiled files
+*.pyc
+*.pyo
+__pycache__/
+
+# Environment-specific files
+.env
+*.env
+
+# Logs
+*.log
+logs/
+
+# Django-specific files
+db.sqlite3
+media/
+staticfiles/
+local_settings.py
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+
+# Test coverage reports
+.coverage
+htmlcov/
+
+# Mypy and other type-checking files
+.mypy_cache/
+.dmypy.json
+.pyre/
+
+# Static analysis and formatting tools
+.pytest_cache/
+*.mypy_cache/
+*.isort.cfg
+*.pylintrc
+.tox/
+
+# Packaging files
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+
+db.sqlite3
